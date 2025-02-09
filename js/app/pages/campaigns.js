@@ -117,7 +117,7 @@ export const campaigns = {
                         <tr v-for="(item,i) in data.items">
                             <td class="id">{{item.id}}</td>
                             <td class="id>
-
+                                <toogle v-model="item.published" @update:modelValue="parent.formData = item;action();" />
                             </td>
                             <td><router-link :to="'/campaign/'+item.id">{{item.title}}</router-link></td>
                             <td class="id">
