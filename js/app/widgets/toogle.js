@@ -9,19 +9,19 @@ export var toogle = {
             this.value = this.modelValue;
         }
     },
-    mounted(){
+    mounted() {
         this.value = this.modelValue;
     },
-    methods:{
-        change(){
+    methods: {
+        change() {
             this.$emit('update:modelValue', this.value.toString());
         }
     },
-    props:{
-        modelValue: String
+    props: {
+        modelValue: String 
     },
 
-    template:`
+    template: `
         <label class="switch">
             <input type="checkbox" v-model="value" @change="change()">
             <span class="slider round"></span>
