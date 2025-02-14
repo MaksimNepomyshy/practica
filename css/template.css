@@ -13,11 +13,6 @@
 #left-area {
     width: 40%;
     background: #f4f4f4;
-    /* display: flex; */
-    /* flex-direction: column;*/
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* padding: 20px; */
     height: 100vh;
 }
 
@@ -93,7 +88,7 @@
 }
 
 form {
-    width: 60%; /* Можно настроить ширину формы */
+    width: 60%; 
     border-radius: 10px;
 }
 
@@ -232,16 +227,15 @@ input[type="date"] {
     font-size: 14px;
 }
 
-/* Стили таблицы */
 .table {
     width: 100%;
-    border-collapse: collapse; /* Убедитесь, что границы ячеек сливаются */
-    border-spacing: 0; /* Убираем пространство между ячейками */
+    border-collapse: collapse; 
+    border-spacing: 0; 
 }
 
 table {
     width: 100%;
-    border-collapse: collapse; /* collapse borders to single line */
+    border-collapse: collapse;
   }
 
   table a {
@@ -250,13 +244,13 @@ table {
 }
 
   th, td {
-    border: 1px solid #ddd; /* add border to all cells */
+    border: 1px solid #ddd; 
     padding: 8px;
     text-align: right;
   }
 
   th {
-    background-color: white; /* add light gray background to header cells */
+    background-color: white; 
   }
 
 .id {
@@ -286,11 +280,11 @@ table {
 }
 
 .table tr:nth-child(odd) {
-    background-color: #f2f2f2; /* Светло-серый */
+    background-color: #f2f2f2; 
 }
 
 .table tr:nth-child(even) {
-    background-color: #ffffff; /* Белый */
+    background-color: #ffffff;
 }
 
 .popup-back{
@@ -324,17 +318,17 @@ table {
   .head-title {
     font-size: 18px;
     font-weight: bold;
-    color: #333; /* Темный текст */
+    color: #333;
     text-align: right;
   }
   
   .w80 {
-    flex: 0 0 80%; /* Ширина 80% */
+    flex: 0 0 80%;
   }
   
   .w202 {
-    flex: 0 0 19%; /* Ширина 20% */
-    text-align: right; /* Выравнивание по правому краю */
+    flex: 0 0 19%; 
+    text-align: right; 
     align-content: center;
   }
   
@@ -345,21 +339,18 @@ table {
   
   
   a {
-    color: #888; /* Серый цвет ссылки */
-    text-decoration: none; /* Без подчеркивания */
+    color: #888; 
+    text-decoration: none; 
     font-size: 16px;
   }
   
-  /* a:hover {
-    color: #f00; 
-  } */
   
   .popup-inner {
-    width: 100%; /* Растянуть на всю ширину */
-    padding: 20px 20px; /* Внутренние отступы */
-    color: #555; /* Цвет текста контента */
+    width: 100%;
+    padding: 20px 20px; 
+    color: #555;
     font-size: 14px;
-    line-height: 1.6; /* Увеличенный межстрочный интервал */
+    line-height: 1.6; 
   }
   
   i:hover {
@@ -581,7 +572,7 @@ input:checked + .slider:before {
 }
 
 a {
-    text-decoration: none; /* Убирает подчеркивание при наведении */
+    text-decoration: none;
 }
 
 .btnS {
@@ -592,18 +583,18 @@ a {
     color: white;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
-    text-decoration: none; /* Убирает подчеркивание */
+    text-decoration: none; 
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px; /* Отступ между текстом и иконкой */
+    gap: 8px; 
 
 }
 
 .btnS:hover {
     background: #1c7d82;
     color: white;
-    text-decoration: none; /* Убирает подчеркивание при наведении */
+    text-decoration: none; 
 }
 
 .w10{
@@ -882,6 +873,110 @@ a {
         width: calc(100%- 80px);
         text-aligh: left;
     }
+}
+
+@media (max-width: 767px) {
+    #wrapper {
+        flex-direction: column;
+    }
+
+    #left-area {
+        width: 100%;
+        height: auto; 
+    }
+
+    #right-area {
+        width: 100%;
+        height: auto;
+    }
+
+    #right-area img {
+        height: auto; 
+        object-fit: contain; 
+    }
+
+    .inner-form {
+        height: auto;
+        padding: 20px; 
+    }
+
+    form {
+        width: 90%; 
+    }
+
+    .table {
+        font-size: 14px; 
+    }
+
+    th, td {
+        padding: 5px;
+    }
+
+    .popup {
+        width: 95%; 
+        margin: 10px auto;
+        top: auto; 
+        left: auto; 
+        bottom: auto;
+    }
+    .popup-inner {
+      padding: 10px;
+    }
+    .header {
+        height: auto; 
+        padding: 10px; 
+    }
+    #menu ul {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    #menu li a {
+        padding: 10px; 
+    }
+
+    .panel, .flex.panel, .flex.pannel{
+        display:block;
+    }
+
+    .panel >div, .flex.panel >div, .flex.pannel >div{
+        width:100% !important;
+    }
+
+    .cubes{
+        font-size: 22px;
+    }
+
+    .clicks, .leads, .views, .ctr{
+        padding: 10px;
+    }
+    .clicks div, .leads div, .views div, .ctr div{
+        margin-bottom: 5px;
+    }
+    .clicks :last-child, .leads :last-child, .views :last-child, .ctr :last-child {
+        font-size: 14px;
+    }
+
+    .filchart {
+        padding: 5px;
+    }
+
+    #chartOuter{
+        padding-top: 20px;
+    }
+
+
+    .tabs ul li{
+        font-size: 14px;
+        padding: 5px 10px;
+        margin-bottom: 5px;
+    }
+
+    .image{
+        width: 80px;
+        height: 60px;
+    }
+
 }
 
 
